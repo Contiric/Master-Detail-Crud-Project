@@ -30,34 +30,14 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr *ngFor = "let category of categories">
       <td>
-        <strong>Lazer</strong><br>
-        <strong>Cinema, parque, praia, etc</strong>
+        <strong>{{category.name}}</strong><br>
+        <strong>{{category.description}}</strong>
       </td>
       <td>
-        <a [routerLink]="[12, 'edit']" class="btn btn-outline-info btn-sm botaoeditar">Editar</a>
-        <a (click)= "alert('excluir')" [routerLink]="[12, 'edit']" class="btn btn-outline-danger btn-sm">Excluir</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <strong>Lazer</strong><br>
-        <strong>Cinema, parque, praia, etc</strong>
-      </td>
-      <td>
-        <a [routerLink]="[12, 'edit']" class="btn btn-outline-info btn-sm botaoeditar">Editar</a>
-        <a (click)= "alert('excluir')" [routerLink]="[12, 'edit']" class="btn btn-outline-danger btn-sm">Excluir</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <strong>Lazer</strong><br>
-        <strong>Cinema, parque, praia, etc</strong>
-      </td>
-      <td>
-        <a [routerLink]="[12, 'edit']" class="btn btn-outline-info btn-sm botaoeditar">Editar</a>
-        <a (click)= "alert('excluir')" [routerLink]="[12, 'edit']" class="btn btn-outline-danger btn-sm">Excluir</a>
+        <a [routerLink]="[category.id, 'edit']" class="btn btn-outline-info btn-sm botaoeditar">Editar</a>
+        <a (click)= "deleteCategory(category)" [routerLink]="[12, 'edit']" class="btn btn-outline-danger btn-sm">Excluir</a>
       </td>
     </tr>
   </tbody>
