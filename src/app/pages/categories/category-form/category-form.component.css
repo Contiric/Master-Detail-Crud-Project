@@ -1,0 +1,16 @@
+.botaovoltar a {
+    margin-left: 32rem;
+}
+
+.nome input {
+   width: 30rem;
+   margin-left: 2rem;
+}
+
+.descricao input {
+    width: 30rem;
+}
+
+.salvar {
+    margin-left: 76rem;
+}
